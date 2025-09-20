@@ -155,7 +155,7 @@
                 <div class="card bg-white p-8 rounded-3xl text-center shadow-md border-2 border-amber-500">
                     <div class="bg-amber-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 12.2c0-1.8-1-3.6-2.5-4.4C16.8 6.4 14.4 6 12 6c-3.6 0-6.7 2.4-8.1 5.9C3.1 11.2 3 11.6 3 12c0 2.8 2.2 5 5 5h7c2.8 0 5-2.2 5-5z"></path>
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-2">باقة 10 ميغا بايت</h3>
@@ -172,7 +172,7 @@
                 <div class="card bg-white p-8 rounded-3xl text-center shadow-md">
                     <div class="bg-amber-100 text-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-2">باقة 16 ميغا بايت</h3>
@@ -188,7 +188,7 @@
                  <div class="card bg-white p-8 rounded-3xl text-center shadow-md">
                     <div class="bg-amber-100 text-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-2">باقة 40 ميغا بايت</h3>
@@ -211,7 +211,8 @@
                 <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
                     املأ النموذج التالي لتبدأ رحلتك مع الإنترنت السريع والموثوق. فريقنا سيتواصل معك قريبًا.
                 </p>
-                <form id="join-form" class="max-w-xl mx-auto space-y-6">
+                <!-- تم تحديث رابط Formspree بناءً على طلبك -->
+                <form id="join-form" action="https://formspree.io/f/xldwqoyw" method="POST" class="max-w-xl mx-auto space-y-6">
                     <div>
                         <input type="text" id="join-name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-shadow" placeholder="الاسم الكامل" required>
                     </div>
@@ -224,10 +225,11 @@
                     <div>
                         <select id="join-package" name="package" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-shadow" required>
                             <option value="">اختر الباقة</option>
-                            <option value="باقة الأساسي">باقة الأساسي</option>
-                            <option value="باقة المحترفين">باقة المحترفين</option>
-                            <option value="باقة الشركات">باقة الشركات</option>
-                            <option value="باقة أصحاب الجملة">باقة أصحاب الجملة</option>
+                            <option value="باقة 4 ميغا بايت">باقة 4 ميغا بايت</option>
+                            <option value="باقة 10 ميغا بايت">باقة 10 ميغا بايت</option>
+                            <option value="باقة 16 ميغا بايت">باقة 16 ميغا بايت</option>
+                            <option value="باقة 40 ميغا بايت">باقة 40 ميغا بايت</option>
+                            <option value="باقة مفتوحة لا محدودة لاصحاب الشبكات">باقة مفتوحة لا محدودة لاصحاب الشبكات</option>
                         </select>
                     </div>
                     <button type="submit" class="w-full btn-primary text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
@@ -244,11 +246,11 @@
                 <!-- FAQ Item 1 -->
                 <div class="faq-item bg-white p-6 rounded-3xl shadow-md cursor-pointer transition-all duration-300">
                     <div class="flex justify-between items-center">
-                        <h3 class="text-lg font-bold">كيف يمكنني تفعيل الخدمة بعد الاشتراك؟</h3>
+                        <h3 class="text-lg font-bold">كيف يمكنني تفعيل الخدمة و الاشتراك؟</h3>
                         <span class="text-xl font-bold transform transition-transform duration-300">+</span>
                     </div>
                     <div class="faq-answer hidden mt-4 text-gray-600">
-                        بعد اشتراكك، سيتواصل معك فريقنا الفني لتحديد موعد مناسب لتركيب الأجهزة وتفعيل الخدمة في منزلك أو مكتبك.
+                        بعد اشتراكك عن طريق خانة تقديم طلب ، سيتواصل معك فريقنا الفني لتحديد موعد مناسب لتركيب الأجهزة وتفعيل الخدمة في منزلك أو مكتبك.
                     </div>
                 </div>
                 <!-- FAQ Item 2 -->
@@ -285,7 +287,7 @@
                     <div class="flex items-center space-x-3 space-x-reverse">
                         <div class="bg-amber-100 p-3 rounded-full">
                             <svg class="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2C8.95 2 6.38 4.09 5.56 7.15c-1.63 6.07 3.09 11.55 8.91 10.85 4.67-.55 8.35-4.66 8.53-9.52C23.08 7.23 18.04 2 12 2zm1 14h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.34 1.04-.21 1.25.41 2.52.65 3.84.65.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.63 21 3 13.37 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.32.24 2.59.65 3.84.13.37.06.77-.21 1.04l-2.2 2.2z"></path>
                             </svg>
                         </div>
                         <span class="text-lg font-semibold text-gray-700">905550929555+</span>
@@ -308,7 +310,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
@@ -317,17 +318,6 @@
             <p>&copy; 2025 فرات نت. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
-
-    <!-- Success and Error Modal -->
-    <div id="status-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4 hidden">
-        <div class="bg-white rounded-xl shadow-lg max-w-sm w-full p-6 text-center">
-            <h3 id="modal-title" class="text-2xl font-bold mb-4"></h3>
-            <p id="modal-text" class="text-gray-700 mb-6"></p>
-            <button id="close-modal" class="btn-primary text-white font-bold py-2 px-6 rounded-full">
-                موافق
-            </button>
-        </div>
-    </div>
 
     <script>
         // Smooth scrolling for navigation links
@@ -362,62 +352,6 @@
                 sign.textContent = answer.classList.contains('hidden') ? '+' : '-';
             });
         });
-
-        // Form submission handling
-        const joinForm = document.getElementById('join-form');
-        const statusModal = document.getElementById('status-modal');
-        const modalTitle = document.getElementById('modal-title');
-        const modalText = document.getElementById('modal-text');
-        const closeModalBtn = document.getElementById('close-modal');
-
-        joinForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const formData = new FormData(e.target);
-            const data = Object.fromEntries(formData.entries());
-
-            // URL الخاص بنموذج Formspree
-            const formspreeUrl = 'https://formspree.io/f/xldwqoyw';
-
-            try {
-                const response = await fetch(formspreeUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data),
-                });
-
-                if (response.ok) {
-                    modalTitle.textContent = 'تم الإرسال بنجاح!';
-                    modalTitle.classList.remove('text-red-600');
-                    modalTitle.classList.add('text-green-600');
-                    modalText.textContent = 'شكراً لك، سيتم التواصل معك قريباً.';
-                    statusModal.classList.remove('hidden');
-                    e.target.reset();
-                } else {
-                    console.error('Form submission failed:', response.statusText);
-                    modalTitle.textContent = 'خطأ في الإرسال';
-                    modalTitle.classList.remove('text-green-600');
-                    modalTitle.classList.add('text-red-600');
-                    modalText.textContent = 'حدث خطأ أثناء إرسال الطلب. يرجى المحاولة لاحقاً.';
-                    statusModal.classList.remove('hidden');
-                }
-            } catch (error) {
-                console.error('Network error or submission issue:', error);
-                modalTitle.textContent = 'خطأ في الإرسال';
-                modalTitle.classList.remove('text-green-600');
-                modalTitle.classList.add('text-red-600');
-                modalText.textContent = 'حدث خطأ أثناء إرسال الطلب. يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.';
-                statusModal.classList.add('hidden');
-            }
-        });
-
-        closeModalBtn.addEventListener('click', () => {
-            statusModal.classList.add('hidden');
-        });
-        
     </script>
 </body>
 </html>
-
-
-
