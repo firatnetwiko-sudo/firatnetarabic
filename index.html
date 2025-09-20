@@ -211,7 +211,6 @@
                 <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
                     املأ النموذج التالي لتبدأ رحلتك مع الإنترنت السريع والموثوق. فريقنا سيتواصل معك قريبًا.
                 </p>
-                <!-- تم تحديث رابط Formspree بناءً على طلبك -->
                 <form id="join-form" action="https://formspree.io/f/xldwqoyw" method="POST" class="max-w-xl mx-auto space-y-6">
                     <div>
                         <input type="text" id="join-name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-shadow" placeholder="الاسم الكامل" required>
@@ -232,10 +231,17 @@
                             <option value="باقة مفتوحة لا محدودة لاصحاب الشبكات">باقة مفتوحة لا محدودة لاصحاب الشبكات</option>
                         </select>
                     </div>
-                    <button type="submit" class="w-full btn-primary text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <button type="submit" id="submit-btn" class="w-full btn-primary text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                         إرسال الطلب
                     </button>
                 </form>
+                <!-- رسالة النجاح -->
+                <div id="submission-status" class="hidden mt-6">
+                    <div class="bg-green-100 text-green-800 p-4 rounded-lg">
+                        <p class="font-bold">لقد تم إرسال طلبك بنجاح.</p>
+                        <p>سوف يتم التواصل معكم في أقرب وقت. نشكرك على انضمامك لنا.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -351,6 +357,52 @@
                 answer.classList.toggle('hidden');
                 sign.textContent = answer.classList.contains('hidden') ? '+' : '-';
             });
+        });
+
+        // Handle form submission without redirecting
+        const joinForm = document.getElementById('join-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const submissionStatus = document.getElementById('submission-status');
+
+        joinForm.addEventListener('submit', async (e) => {
+            // Prevent the default form submission (redirect)
+            e.preventDefault();
+
+            // Hide previous messages and show loading state
+            submissionStatus.classList.add('hidden');
+            submitBtn.textContent = 'جاري الإرسال...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(joinForm);
+
+            try {
+                const response = await fetch(joinForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Show success message
+                    submissionStatus.classList.remove('hidden');
+                    joinForm.reset(); // Reset the form fields
+                    joinForm.classList.add('hidden'); // Hide the form itself
+                } else {
+                    // Handle non-OK responses (e.g., server errors)
+                    submissionStatus.innerHTML = '<div class="bg-red-100 text-red-800 p-4 rounded-lg"><p class="font-bold">حدث خطأ أثناء إرسال الطلب. يرجى المحاولة مرة أخرى.</p></div>';
+                    submissionStatus.classList.remove('hidden');
+                }
+            } catch (error) {
+                // Handle network errors
+                submissionStatus.innerHTML = '<div class="bg-red-100 text-red-800 p-4 rounded-lg"><p class="font-bold">فشل الاتصال. يرجى التحقق من اتصالك بالإنترنت.</p></div>';
+                submissionStatus.classList.remove('hidden');
+            } finally {
+                // Restore button state
+                submitBtn.textContent = 'إرسال الطلب';
+                submitBtn.disabled = false;
+            }
         });
     </script>
 </body>
