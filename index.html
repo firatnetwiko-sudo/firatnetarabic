@@ -26,6 +26,14 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
+        .btn-golden-static {
+            background-color: #F59E0B;
+            transition: all 0.3s ease;
+        }
+        .btn-golden-static:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
         .card {
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
@@ -63,6 +71,7 @@
                 <a href="#join" class="nav-link text-gray-600 hover:text-amber-500 pb-2 transition-colors">انضم إلى شبكتنا</a>
                 <a href="#faq" class="nav-link text-gray-600 hover:text-amber-500 pb-2 transition-colors">الدعم والأسئلة الشائعة</a>
                 <a href="#contact" class="nav-link text-gray-600 hover:text-amber-500 pb-2 transition-colors">تواصل معنا</a>
+                <!-- تم ازالة زر متجر نبع السلام من قائمة التنقل -->
             </div>
             <button id="menu-btn" class="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -78,6 +87,7 @@
             <a href="#join" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 transition-colors">انضم إلى شبكتنا</a>
             <a href="#faq" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 transition-colors">الدعم والأسئلة الشائعة</a>
             <a href="#contact" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 transition-colors">تواصل معنا</a>
+            <!-- تم ازالة زر متجر نبع السلام من قائمة التنقل في الجوال -->
         </div>
     </nav>
 
@@ -121,7 +131,7 @@
                     </div>
                     <div class="md:w-1/2 text-gray-600 leading-relaxed">
                         <p class="mb-4">
-                            تأسست شركة فرات نت بهدف تقديم حلول إنترنت مبتكرة وموثوقة للأفراد والشركات , نحن نؤمن بأن الوصول السريع والمستقر للإنترنت هو حق للجميع، ونسعى جاهدين لتحقيق ذلك عبر أحدث التقنيات وشبكة قوية.
+                            تأسست شركة فرات نت بهدف تقديم حلول إنترنت مبتكرة وموثوقة للأفراد والشركات في منطقة الفرات. نحن نؤمن بأن الوصول السريع والمستقر للإنترنت هو حق للجميع، ونسعى جاهدين لتحقيق ذلك عبر أحدث التقنيات وشبكة قوية.
                         </p>
                         <p class="mb-4">
                             يضم فريقنا نخبة من المهندسين والفنيين المتخصصين، الذين يعملون على مدار الساعة لضمان أفضل تجربة ممكنة لعملائنا. نسعى دائمًا للتطوير والابتكار لتقديم خدمات تتجاوز توقعاتكم.
@@ -135,32 +145,32 @@
         <section id="services" class="py-16 md:py-24">
             <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">خدماتنا وباقاتنا</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Service Card 1 -->
+                <!-- Service Card 1: باقة 6 ميغا بايت (كانت 4) -->
                 <div class="card bg-white p-8 rounded-3xl text-center shadow-md">
                     <div class="bg-amber-100 text-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-2">باقة 5 دولار</h3>
+                    <h3 class="text-2xl font-bold mb-2">باقة $7  </h3>
                     <p class="text-gray-600 mb-4">مثالية للاستخدام الأساسي وتصفح الويب.</p>
-                    <span class="text-4xl font-bold text-amber-600">10</span><span class="text-xl font-bold text-amber-600"> ميجابت/ثانية</span>
+                    <span class="text-4xl font-bold text-amber-600">6</span><span class="text-xl font-bold text-amber-600"> ميجابت/ثانية</span>
                     <ul class="text-gray-500 mt-4 text-sm space-y-2">
                         <li>✅ تصفح لا محدود</li>
                         <li>✅ دعم فني 24/7</li>
                     </ul>
                     <a href="#join" class="block w-full mt-6 btn-primary text-white font-bold py-3 px-6 rounded-full">اشترك الآن</a>
                 </div>
-                <!-- Service Card 2 -->
+                <!-- Service Card 2: باقة 8 ميغا بايت (كانت 10) -->
                 <div class="card bg-white p-8 rounded-3xl text-center shadow-md border-2 border-amber-500">
                     <div class="bg-amber-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-2">باقة 8 دولار</h3>
+                    <h3 class="text-2xl font-bold mb-2">باقة $8  </h3>
                     <p class="text-gray-600 mb-4">للمحترفين واللعب عبر الإنترنت بدون تأخير.</p>
-                    <span class="text-4xl font-bold text-amber-600">16</span><span class="text-xl font-bold text-amber-600"> ميجابت/ثانية</span>
+                    <span class="text-4xl font-bold text-amber-600">8</span><span class="text-xl font-bold text-amber-600"> ميجابت/ثانية</span>
                     <ul class="text-gray-500 mt-4 text-sm space-y-2">
                         <li>✅ تصفح لا محدود</li>
                         <li>✅ دعم فني 24/7</li>
@@ -168,32 +178,32 @@
                     </ul>
                     <a href="#join" class="block w-full mt-6 btn-primary text-white font-bold py-3 px-6 rounded-full">اشترك الآن</a>
                 </div>
-                <!-- Service Card 3 -->
+                <!-- Service Card 3: باقة 10 ميغا بايت (كانت 16) -->
                 <div class="card bg-white p-8 rounded-3xl text-center shadow-md">
                     <div class="bg-amber-100 text-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-2">باقة 10 دولار </h3>
+                    <h3 class="text-2xl font-bold mb-2">باقة $10  </h3>
                     <p class="text-gray-600 mb-4">للمستخدمين المتوسطين والشركات الصغيرة.</p>
-                    <span class="text-4xl font-bold text-amber-600">20</span><span class="text-xl font-bold text-amber-600"> ميجابت/ثانية</span>
+                    <span class="text-4xl font-bold text-amber-600">10</span><span class="text-xl font-bold text-amber-600"> ميجابت/ثانية</span>
                     <ul class="text-gray-500 mt-4 text-sm space-y-2">
                         <li>✅ تصفح لا محدود</li>
                         <li>✅ دعم فني 24/7</li>
                     </ul>
                     <a href="#join" class="block w-full mt-6 btn-primary text-white font-bold py-3 px-6 rounded-full">اشترك الآن</a>
                 </div>
-                 <!-- Service Card 4 -->
+                 <!-- Service Card 4: باقة 30 ميغا بايت (كانت 40) -->
                  <div class="card bg-white p-8 rounded-3xl text-center shadow-md">
                     <div class="bg-amber-100 text-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-2">باقة 50 ميغا بايت</h3>
-                    <p class="text-gray-600 mb-4">حلول إنترنت مخصصة للمحلات التجارية فقط.</p>
-                    <span class="text-4xl font-bold text-amber-600">50</span><span class="text-xl font-bold text-amber-600"> ميجابت/ثانية</span>
+                    <h3 class="text-2xl font-bold mb-2">باقة $15  </h3>
+                    <p class="text-gray-600 mb-4">حلول إنترنت مخصصة للشركات الكبيرة.</p>
+                    <span class="text-4xl font-bold text-amber-600">30</span><span class="text-xl font-bold text-amber-600"> ميجابت/ثانية</span>
                     <ul class="text-gray-500 mt-4 text-sm space-y-2">
                         <li>✅ تصفح لا محدود</li>
                         <li>✅ دعم فني VIP</li>
@@ -224,10 +234,11 @@
                     <div>
                         <select id="join-package" name="package" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-shadow" required>
                             <option value="">اختر الباقة</option>
-                            <option value="باقة 5 ميغا بايت">باقة 5 ميغا بايت</option>
-                            <option value="باقة 10 ميغا بايت">باقة 10 ميغا بايت</option>
-                            <option value="باقة 16 ميغا بايت">باقة 16 ميغا بايت</option>
-                            <option value="باقة 50 ميغا بايت">باقة 50 ميغا بايت</option>
+                            <!-- تم تحديث الباقات في قائمة الخيارات هنا -->
+                            <option value="باقة $7 ">باقة 6 ميغا بايت</option>
+                            <option value="باقة $8  ">باقة 8 ميغا بايت</option>
+                            <option value="$باقة 10  ">باقة 10 ميغا بايت</option>
+                            <option value="$باقة 30  ">باقة 30 ميغا بايت</option>
                             <option value="باقة مفتوحة لا محدودة لاصحاب الشبكات">باقة مفتوحة لا محدودة لاصحاب الشبكات</option>
                         </select>
                     </div>
@@ -296,7 +307,7 @@
                                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.34 1.04-.21 1.25.41 2.52.65 3.84.65.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.63 21 3 13.37 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.32.24 2.59.65 3.84.13.37.06.77-.21 1.04l-2.2 2.2z"></path>
                             </svg>
                         </div>
-                        <span class="text-lg font-semibold text-gray-700">905315634783+</span>
+                        <span class="text-lg font-semibold text-gray-700">905550929555+</span>
                     </div>
                     <div class="flex items-center space-x-3 space-x-reverse">
                         <div class="bg-amber-100 p-3 rounded-full">
@@ -307,11 +318,16 @@
                         <span class="text-lg font-semibold text-gray-700">info@firatnet.com</span>
                     </div>
                 </div>
-                <!-- زر واتساب جديد -->
-                <div class="mt-8">
+                <!-- أزرار التواصل -->
+                <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 sm:space-x-reverse">
                     <a href="https://wa.me/905348866662" target="_blank" rel="noopener noreferrer" 
                        class="inline-block btn-primary text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300">
                         تواصل مع خدمة العملاء عبر واتساب
+                    </a>
+                    <!-- زر متجر نبع السلام باللون الذهبي الثابت -->
+                    <a href="https://www.nabaaalsalam.com/" target="_blank" rel="noopener noreferrer" 
+                       class="inline-block btn-golden-static text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                       متجر نبع السلام
                     </a>
                 </div>
             </div>
@@ -407,6 +423,3 @@
     </script>
 </body>
 </html>
-
-
-
